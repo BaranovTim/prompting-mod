@@ -1,0 +1,14 @@
+{
+  "name": "skill-coach",
+  "description": "Skill Coach: a Claude Code mod that matches skills to your prompts",
+  "owner": {
+    "name": "Timothee"
+  },
+  "plugins": [
+    {
+      "name": "skill-coach",
+      "source": "./",
+      "description": "Finds the skills that fit each prompt and offers a clearer prompt that uses them"
+    }
+  ]
+}
