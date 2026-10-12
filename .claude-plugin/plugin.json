@@ -1,8 +1,8 @@
 {
   "name": "skill-coach",
   "displayName": "Skill Coach",
-  "version": "0.1.0",
-  "description": "Before each prompt is sent, finds the skills that fit it (installed ones, plus plugins you could install) and offers a clearer prompt that uses them, for you to edit, send or skip.",
+  "version": "0.3.0",
+  "description": "Before each prompt is sent, researches how to prompt the model in your window and your kind of task, finds the skills that fit (installed, or reliable ones online), and offers one rewritten prompt that combines them, for you to send, edit or skip.",
   "author": {
     "name": "Timothee"
   },
@@ -10,26 +10,21 @@
   "keywords": [
     "prompt",
     "skills",
-    "plugins",
+    "model",
+    "research",
     "mod"
   ],
   "userConfig": {
     "model": {
       "type": "string",
-      "title": "Model",
-      "description": "The model that reviews each prompt. Haiku is the fastest and cheapest. Sonnet and Opus write better prompts but are slower and use more of your plan.",
-      "default": "haiku",
+      "title": "Rewriting model",
+      "description": "The model that researches the prompting guides and rewrites each prompt. Sonnet writes good prompts at a moderate speed; Haiku is faster and cheaper; Opus is slowest and uses the most of your plan.",
+      "default": "sonnet",
       "options": [
         "haiku",
         "sonnet",
         "opus"
       ]
-    },
-    "suggestInstalls": {
-      "type": "boolean",
-      "title": "Suggest plugins to install",
-      "description": "Also look at plugins you could install from your marketplaces and the plugin directory, and say when one would help.",
-      "default": true
     },
     "minChars": {
       "type": "number",
